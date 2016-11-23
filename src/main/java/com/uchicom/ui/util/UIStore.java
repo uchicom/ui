@@ -10,9 +10,9 @@ import javax.swing.undo.UndoManager;
  * @author uchicom: Shigeki Uchiyama
  *
  */
-public interface UIStore {
+public interface UIStore<T extends Component> {
 
-	public Component getMainComponent();
+	public T getMainComponent();
 
 	public UndoManager getUndoManager();
 

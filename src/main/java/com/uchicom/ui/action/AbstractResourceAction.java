@@ -1,5 +1,6 @@
 package com.uchicom.ui.action;
 
+import java.awt.Component;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.Properties;
@@ -16,7 +17,7 @@ import com.uchicom.ui.util.UIStore;
  * @author uchicom: Shigeki Uchiyama
  *
  */
-public abstract class AbstractResourceAction extends AbstractAction {
+public abstract class AbstractResourceAction<T extends Component> extends AbstractAction {
 
 	public String CONVERT_IMAGE = "img:";
 
@@ -24,9 +25,9 @@ public abstract class AbstractResourceAction extends AbstractAction {
 
 	public String CONVERT_INT = "int:";
 
-	protected UIStore uiStore;
+	protected UIStore<T> uiStore;
 
-	public AbstractResourceAction(UIStore uiStore) {
+	public AbstractResourceAction(UIStore<T> uiStore) {
 		this.uiStore = uiStore;
 		StringBuffer strBuff = new StringBuffer(128);
 		String className = getClass().getCanonicalName();
