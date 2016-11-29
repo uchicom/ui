@@ -2,6 +2,7 @@ package com.uchicom.ui.util;
 
 import java.awt.Component;
 import java.util.Properties;
+import java.util.ResourceBundle;
 
 import javax.swing.undo.UndoManager;
 
@@ -17,4 +18,6 @@ public interface UIStore<T extends Component> {
 	public UndoManager getUndoManager();
 
 	public Properties getActionResource();
+
+	public ResourceBundle getResourceBundle();
 }
