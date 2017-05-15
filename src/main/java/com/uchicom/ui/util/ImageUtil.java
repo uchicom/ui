@@ -10,6 +10,6 @@ import javax.swing.ImageIcon;
 public class ImageUtil {
 
 	public static ImageIcon getImageIcon(String path) {
-		return new ImageIcon(Thread.currentThread().getContextClassLoader().getResource(path));
+		return new ImageIcon(ImageUtil.class.getClassLoader().getResource(path));
 	}
 }
