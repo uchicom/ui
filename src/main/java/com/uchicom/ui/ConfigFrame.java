@@ -4,13 +4,14 @@ package com.uchicom.ui;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
 import javax.swing.JFrame;
+
+import com.uchicom.ui.util.ResourceUtil;
 
 /**
  * @author uchicom: Shigeki Uchiyama
@@ -19,7 +20,7 @@ import javax.swing.JFrame;
 public class ConfigFrame extends JFrame {
 
 	protected File configFile;
-	protected Properties config = new Properties();
+	protected Properties config;
 
 	public ConfigFrame(File configFile) {
 		this.configFile = configFile;
@@ -45,15 +46,7 @@ public class ConfigFrame extends JFrame {
 	 */
 
 	private void initProperties() {
-		if (configFile.exists() && configFile.isFile()) {
-			try (FileInputStream fis = new FileInputStream(configFile);) {
-				config.load(fis);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+		config = ResourceUtil.createProperties(configFile, "UTF-8");
 	}
 	private void storeProperties() {
 		try {
