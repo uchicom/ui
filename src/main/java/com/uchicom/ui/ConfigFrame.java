@@ -66,4 +66,18 @@ public class ConfigFrame extends JFrame {
 		}
 	}
 
+	public String getString(String key) {
+		return config.getProperty(key);
+	}
+	public int getInt(String key, int defaultValue) {
+		if (config.containsKey(key)) {
+			try {
+				return Integer.parseInt(config.getProperty(key));
+			} catch (NumberFormatException e) {
+				e.printStackTrace();
+			}
+		}
+		return defaultValue;
+	}
+
 }
