@@ -14,6 +14,15 @@ import javax.swing.UIManager;
  */
 public class DialogUtil {
 
+	public static void showMessageDialog(Component parentComponent, String message, String title, int messageType) {
+		showDialog(parentComponent,
+				message,
+				title,
+				messageType,
+				JOptionPane.DEFAULT_OPTION,
+				Dialog.ModalityType.DOCUMENT_MODAL);
+	}
+
 	public static void showMessageDialog(Component parentComponent, String message) {
 		showDialog(parentComponent,
 				message,
