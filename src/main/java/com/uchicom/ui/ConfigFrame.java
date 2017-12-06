@@ -24,14 +24,19 @@ public class ConfigFrame extends JFrame {
 
 	public ConfigFrame(File configFile) {
 		this.configFile = configFile;
+		initProperties();
 		initComponents();
 	}
 
+	public ConfigFrame(File configFile, Properties config) {
+		this.configFile = configFile;
+		this.config = config;
+		initComponents();
+	}
 	/**
 	 *
 	 */
 	private void initComponents() {
-		initProperties();
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosed(WindowEvent we) {

@@ -8,6 +8,7 @@ import java.awt.event.ComponentEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
+import java.util.Properties;
 
 import javax.swing.JFrame;
 
@@ -22,6 +23,10 @@ public class ResumeFrame extends ConfigFrame {
 	private static final String PROP_WINDOW_STATE = "window.state";
 	public ResumeFrame(File configFile, String windowKey) {
 		super(configFile);
+		initComponents(windowKey);
+	}
+	public ResumeFrame(File configFile, Properties config, String windowKey) {
+		super(configFile, config);
 		initComponents(windowKey);
 	}
 	private void initComponents(String windowKey) {
