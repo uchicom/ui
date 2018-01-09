@@ -11,7 +11,7 @@ import java.util.Properties;
 
 import javax.swing.JFrame;
 
-import com.uchicom.ui.util.ResourceUtil;
+import com.uchicom.util.ResourceUtil;
 
 /**
  * @author uchicom: Shigeki Uchiyama
