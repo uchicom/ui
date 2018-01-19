@@ -17,10 +17,15 @@ import javax.swing.JDialog;
  */
 public class ResumeDialog extends JDialog {
 
-	private Properties config;
+	protected Properties config;
 	private static final String PROP_SPLIT_CHAR = ":";
 	private static final String PROP_WINDOW_POSITION = "window.position";
 
+	public ResumeDialog(Window owner, Properties config, String dialogKey) {
+		super(owner);
+		this.config = config;
+		initComponents(dialogKey);
+	}
 	public ResumeDialog(Properties config, String dialogKey) {
 		this.config = config;
 		initComponents(dialogKey);
