@@ -37,8 +37,8 @@ public class DialogUtil {
 		return showDialog(parentComponent,
 				message,
 				title,
-				optionType,
 				JOptionPane.QUESTION_MESSAGE,
+				optionType,
 				Dialog.ModalityType.DOCUMENT_MODAL);
 	}
 
