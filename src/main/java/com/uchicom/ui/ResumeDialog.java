@@ -26,6 +26,12 @@ public class ResumeDialog extends JDialog {
 		this.config = config;
 		initComponents(dialogKey);
 	}
+
+	public ResumeDialog(ResumeFrame owner, String dialogKey) {
+		super(owner);
+		this.config = owner.config;
+		initComponents(dialogKey);
+	}
 	public ResumeDialog(Properties config, String dialogKey) {
 		this.config = config;
 		initComponents(dialogKey);

@@ -2,6 +2,7 @@
 package com.uchicom.ui;
 
 
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
@@ -17,6 +18,7 @@ public class ImagePanel extends JPanel {
 
 	public void setImage(BufferedImage image) {
 		this.image = image;
+		setPreferredSize(new Dimension(image.getWidth(), image.getHeight()));
 	}
 	@Override
 	public void paint(Graphics g) {

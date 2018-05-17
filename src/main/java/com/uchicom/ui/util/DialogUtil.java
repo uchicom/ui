@@ -15,48 +15,27 @@ import javax.swing.UIManager;
 public class DialogUtil {
 
 	public static void showMessageDialog(Component parentComponent, String message, String title, int messageType) {
-		showDialog(parentComponent,
-				message,
-				title,
-				messageType,
-				JOptionPane.DEFAULT_OPTION,
+		showDialog(parentComponent, message, title, messageType, JOptionPane.DEFAULT_OPTION,
 				Dialog.ModalityType.DOCUMENT_MODAL);
 	}
 
 	public static void showMessageDialog(Component parentComponent, String message) {
-		showDialog(parentComponent,
-				message,
-				UIManager.getString(
-						"OptionPane.messageDialogTitle"),
-				JOptionPane.INFORMATION_MESSAGE,
-				JOptionPane.DEFAULT_OPTION,
-				Dialog.ModalityType.DOCUMENT_MODAL);
+		showDialog(parentComponent, message, UIManager.getString("OptionPane.messageDialogTitle"),
+				JOptionPane.INFORMATION_MESSAGE, JOptionPane.DEFAULT_OPTION, Dialog.ModalityType.DOCUMENT_MODAL);
 	}
 
 	public static int showConfirmDialog(Component parentComponent, String message, String title, int optionType) {
-		return showDialog(parentComponent,
-				message,
-				title,
-				JOptionPane.QUESTION_MESSAGE,
-				optionType,
+		return showDialog(parentComponent, message, title, JOptionPane.QUESTION_MESSAGE, optionType,
 				Dialog.ModalityType.DOCUMENT_MODAL);
 	}
 
 	public static int showConfirmDialog(Component parentComponent, String message) {
-		return showDialog(parentComponent,
-				message,
-				UIManager.getString("OptionPane.titleText"),
-				JOptionPane.QUESTION_MESSAGE,
-				JOptionPane.YES_NO_CANCEL_OPTION,
-				Dialog.ModalityType.DOCUMENT_MODAL);
+		return showDialog(parentComponent, message, UIManager.getString("OptionPane.titleText"),
+				JOptionPane.QUESTION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, Dialog.ModalityType.DOCUMENT_MODAL);
 	}
 
-	public static int showDialog(Component parentComponent,
-			String message,
-			String title,
-			int mesasgeType,
-			int optionType,
-			Dialog.ModalityType modalityType) {
+	public static int showDialog(Component parentComponent, String message, String title, int mesasgeType,
+			int optionType, Dialog.ModalityType modalityType) {
 		JOptionPane pane = new JOptionPane(message, mesasgeType, optionType);
 		JDialog dialog = pane.createDialog(parentComponent, title);
 		dialog.pack();
