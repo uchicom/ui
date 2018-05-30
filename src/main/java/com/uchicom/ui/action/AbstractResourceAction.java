@@ -19,6 +19,11 @@ import com.uchicom.ui.util.UIStore;
  */
 public abstract class AbstractResourceAction<T extends Component> extends AbstractAction {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public String CONVERT_IMAGE = "img:";
 
 	public String CONVERT_KEY = "key:";

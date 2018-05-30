@@ -19,6 +19,10 @@ import com.uchicom.util.ResourceUtil;
  */
 public class ConfigFrame extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	protected File configFile;
 	protected Properties config;
 

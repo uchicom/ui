@@ -18,6 +18,10 @@ import javax.swing.JFrame;
  */
 public class ResumeFrame extends ConfigFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static final String PROP_SPLIT_CHAR = ":";
 	private static final String PROP_WINDOW_POSITION = "window.position";
 	private static final String PROP_WINDOW_STATE = "window.state";
