@@ -25,8 +25,6 @@ public abstract class MenuDialog<T extends Component> extends ResumeDialog imple
 
 	public MenuDialog(Window owner, Properties config, String dialogKey, Properties resource, String menuKey) {
 		super(owner, config, dialogKey);
-		System.out.println(config);
-		System.out.println(resource);
 		initMenu(resource, menuKey);
 	}
 
@@ -44,8 +42,6 @@ public abstract class MenuDialog<T extends Component> extends ResumeDialog imple
 		JMenuBar menuBar = new JMenuBar();
 		String[] menus = resource.getProperty(menuKey).split(",");
 		for (String menuProp : menus) {
-			System.out.println(menuProp);
-			System.out.println(menuKey + "." + menuProp);
 			menuBar.add(MenuUtil.createMenu(this, resource, actionMap, menuKey + "." + menuProp));
 		}
 		setJMenuBar(menuBar);

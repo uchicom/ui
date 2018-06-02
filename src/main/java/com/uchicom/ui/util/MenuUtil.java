@@ -13,13 +13,9 @@ public class MenuUtil {
 
 	public static <T extends Component> JMenuItem createMenu(UIStore<T> uiStore, Properties resource, Map<String, Action> actionMap, String key) {
 		String name = key + ".NAME";
-		System.out.println(name);
-		System.out.println(resource);
-		System.out.println(resource.containsKey(name));
 		if (resource.containsKey(name)) {
 			JMenu menu = new JMenu(resource.getProperty(name));
 			if (resource.containsKey(key)) {
-				System.out.println(key);
 				String[] childMenu = resource.getProperty(key).split(",");
 				for (String child : childMenu) {
 					if ("".equals(child))
@@ -43,7 +39,6 @@ public class MenuUtil {
 		} else {
 			try {
 				String actionKey = key + ".ACTION";
-				System.out.println(actionKey);
 				Action action = createAction(uiStore, resource, actionMap, actionKey);
 				if (action != null) {
 					return new JMenuItem(action);

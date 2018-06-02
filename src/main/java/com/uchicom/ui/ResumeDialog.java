@@ -16,6 +16,10 @@ import javax.swing.JDialog;
  *
  */
 public class ResumeDialog extends JDialog {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	protected Properties config;
 	private static final String PROP_SPLIT_CHAR = ":";
