@@ -29,6 +29,11 @@ public class DialogUtil {
 				Dialog.ModalityType.DOCUMENT_MODAL);
 	}
 
+
+	public static int showConfirmDialog(Component parentComponent, String message, String title) {
+		return showDialog(parentComponent, message, title,
+				JOptionPane.QUESTION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, Dialog.ModalityType.DOCUMENT_MODAL);
+	}
 	public static int showConfirmDialog(Component parentComponent, String message) {
 		return showDialog(parentComponent, message, UIManager.getString("OptionPane.titleText"),
 				JOptionPane.QUESTION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, Dialog.ModalityType.DOCUMENT_MODAL);
