@@ -16,7 +16,6 @@ import javax.swing.JFrame;
  */
 public class ConfigFrame extends JFrame {
 
-  /** */
   private static final long serialVersionUID = 1L;
 
   protected File configFile;
@@ -34,7 +33,6 @@ public class ConfigFrame extends JFrame {
     initComponents();
   }
 
-  /** */
   private void initComponents() {
     addWindowListener(
         new WindowAdapter() {
@@ -45,7 +43,6 @@ public class ConfigFrame extends JFrame {
         });
   }
 
-  /** */
   private void initProperties() {
     config = ResourceUtil.createProperties(configFile, "UTF-8");
   }

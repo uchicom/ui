@@ -13,7 +13,7 @@ import javax.swing.JPanel;
  * @author uchicom: Shigeki Uchiyama
  */
 public class ImagePanel extends JPanel {
-  /** */
+
   private static final long serialVersionUID = 1L;
 
   private BufferedImage image;

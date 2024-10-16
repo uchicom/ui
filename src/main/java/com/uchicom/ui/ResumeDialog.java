@@ -14,7 +14,7 @@ import javax.swing.JDialog;
  * @author uchicom: Shigeki Uchiyama
  */
 public class ResumeDialog extends JDialog {
-  /** */
+
   private static final long serialVersionUID = 1L;
 
   protected Properties config;
@@ -66,8 +66,8 @@ public class ResumeDialog extends JDialog {
   /**
    * 画面の位置をプロパティに設定する。
    *
-   * @param window
-   * @param key
+   * @param window ウィンドウオブジェクト
+   * @param key 設定ファイルキー
    */
   private void storeWindowPosition(Window window, String key) {
     String value =
@@ -85,8 +85,8 @@ public class ResumeDialog extends JDialog {
   /**
    * 画面のサイズをプロパティから設定する。
    *
-   * @param window
-   * @param key
+   * @param window ウィンドウオブジェクト
+   * @param key 設定ファイルキー
    */
   public void setWindowPosition(Window window, String key) {
     if (config.containsKey(key)) {

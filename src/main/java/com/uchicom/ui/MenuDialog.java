@@ -13,7 +13,6 @@ import javax.swing.JMenuBar;
 
 public abstract class MenuDialog<T extends Component> extends ResumeDialog implements UIStore<T> {
 
-  /** */
   private static final long serialVersionUID = 1L;
 
   protected Map<String, Action> actionMap = new HashMap<>();

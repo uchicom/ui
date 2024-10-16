@@ -22,7 +22,7 @@ public interface FileOpener {
   public static void installDragAndDrop(JComponent component, FileOpener opener) {
     component.setTransferHandler(
         new TransferHandler() {
-          /** */
+
           private static final long serialVersionUID = 1L;
 
           @Override

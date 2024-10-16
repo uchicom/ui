@@ -12,7 +12,7 @@ import javax.swing.Action;
 import javax.swing.JMenuBar;
 
 public abstract class MenuFrame<T extends Component> extends ResumeFrame implements UIStore<T> {
-  /** */
+
   private static final long serialVersionUID = 1L;
 
   public MenuFrame(File configFile, String windowKey, Properties resource, String menuKey) {
