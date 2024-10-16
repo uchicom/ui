@@ -16,7 +16,6 @@ import javax.swing.JFrame;
  */
 public class ResumeFrame extends ConfigFrame {
 
-  /** */
   private static final long serialVersionUID = 1L;
 
   private static final String PROP_SPLIT_CHAR = ":";
@@ -70,8 +69,8 @@ public class ResumeFrame extends ConfigFrame {
   /**
    * 画面の位置をプロパティに設定する。
    *
-   * @param window
-   * @param key
+   * @param window ウィンドウオブジェクト
+   * @param key 設定ファイルキー
    */
   private void storeWindowPosition(Window window, String key) {
     String value =
@@ -89,8 +88,8 @@ public class ResumeFrame extends ConfigFrame {
   /**
    * 画面の位置をプロパティに設定する。
    *
-   * @param frame
-   * @param key
+   * @param frame フレームオブジェクト
+   * @param key 設定ファイルキー
    */
   private void storeWindowState(JFrame frame, String key) {
     String value = frame.getState() + PROP_SPLIT_CHAR + frame.getExtendedState();
@@ -100,8 +99,8 @@ public class ResumeFrame extends ConfigFrame {
   /**
    * 画面のサイズをプロパティから設定する。
    *
-   * @param window
-   * @param key
+   * @param window ウィンドウオブジェクト
+   * @param key 設定ファイルキー
    */
   public void setWindowPosition(Window window, String key) {
     if (config.containsKey(key)) {
