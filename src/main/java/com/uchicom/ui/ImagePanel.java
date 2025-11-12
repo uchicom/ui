@@ -4,7 +4,7 @@ package com.uchicom.ui;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.image.BufferedImage;
+import java.awt.Image;
 import javax.swing.JPanel;
 
 /**
@@ -16,11 +16,11 @@ public class ImagePanel extends JPanel {
 
   private static final long serialVersionUID = 1L;
 
-  private BufferedImage image;
+  Image image;
 
-  public void setImage(BufferedImage image) {
+  public void setImage(Image image) {
     this.image = image;
-    setPreferredSize(new Dimension(image.getWidth(), image.getHeight()));
+    setPreferredSize(new Dimension(image.getWidth(this), image.getHeight(this)));
   }
 
   @Override
@@ -35,11 +35,11 @@ public class ImagePanel extends JPanel {
     g.fillRect(0, 0, getWidth(), getHeight());
     // 中央に表示
     int x = 0, y = 0;
-    if (image.getWidth() < getWidth()) {
-      x = (getWidth() - image.getWidth()) / 2;
+    if (image.getWidth(this) < getWidth()) {
+      x = (getWidth() - image.getWidth(this)) / 2;
     }
-    if (image.getHeight() < getHeight()) {
-      y = (getHeight() - image.getHeight()) / 2;
+    if (image.getHeight(this) < getHeight()) {
+      y = (getHeight() - image.getHeight(this)) / 2;
     }
     // 画像描画
     g.drawImage(image, x, y, this);
